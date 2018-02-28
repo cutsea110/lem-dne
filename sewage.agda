@@ -10,5 +10,4 @@ left : ({P : Set₀} →  ¬ ¬ P → P) → ({P Q : Set₀} → (¬ Q → ¬ P)
 left ¬¬P→P {Q = Q} ¬Q→¬P P = ¬¬P→P {Q} (flip ¬Q→¬P P)
 
 right : ({P Q : Set₀} → (¬ Q → ¬ P) → P → Q) → ({P : Set₀} →  ¬ ¬ P → P)
-right [¬Q→¬P]→P→Q {P} ¬¬P with [¬Q→¬P]→P→Q {P = ⊤} {Q = P}
-... | [¬P→¬⊤]→⊤→P = [¬P→¬⊤]→⊤→P (const ∘ ¬¬P) tt
+right [¬Q→¬P]→P→Q {P} ¬¬P = [¬Q→¬P]→P→Q {P = ⊤} {Q = P} (const ∘ ¬¬P) tt
