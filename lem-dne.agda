@@ -1,5 +1,5 @@
--- | Law of excluded middle
-module lem where
+-- | Law of excluded middle equiv Double negate elimination
+module lem-dne where
 
 open import Data.Empty
 open import Data.Unit
