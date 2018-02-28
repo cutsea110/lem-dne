@@ -1,4 +1,5 @@
-module sewage where
+-- | Law of excluded middle
+module lem where
 
 open import Data.Empty
 open import Data.Unit
